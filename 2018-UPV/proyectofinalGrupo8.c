@@ -47,7 +47,7 @@ int cargar_categorias(categoria t_categorias[])
 	printf ( " Error en la apertura. Es posible que el fichero no exista. \n");
 	}
 	i=0;
-	while(fscanf(fich_categoria,"%s %c %d %d %f",t_categorias[i].nombre,
+	while(fscanf(fich_categoria,"%10s %c %d %d %f",t_categorias[i].nombre,
 	&t_categorias[i].sexo,&t_categorias[i].edadmin,&t_categorias[i].edadmax,&t_categorias[i].precio)==5)
 	{
 		i++;
@@ -65,7 +65,7 @@ int cargar_corredores(corredor t_corredores[],int numCategorias,categoria t_cate
 	printf ( " Error en la apertura. Es posible que el fichero no exista. \n");
 	}
 	i=0; 
-	while(fscanf(fich_corredor,"%s %s %s %d %d %s %c %d %d %d ",t_corredores[i].nombre,t_corredores[i].apellido1,
+	while(fscanf(fich_corredor,"%10s %10s %10s %d %d %20s %c %d %d %d ",t_corredores[i].nombre,t_corredores[i].apellido1,
 	t_corredores[i].apellido2,&t_corredores[i].edad,&t_corredores[i].dorsal,t_corredores[i].club,
 	&t_corredores[i].sexo,&t_corredores[i].horas,&t_corredores[i].minutos,&t_corredores[i].segundos)==10)
 	{
@@ -258,7 +258,7 @@ void gestionar_transporte(corredor t_corredores[],int numCorredores)
 	char nombreClub[MAX];
 	printf("Introduce el nombre de un club:");
 	fflush(stdin);
-	gets(nombreClub);
+	fgets(nombreClub, MAX, stdin);
 	numCorredoresClub=numero_corredores_club(t_corredores,numCorredores,nombreClub);
 	if(numCorredoresClub!=0)
 	{
@@ -472,7 +472,7 @@ float coste_inscripciones_club(categoria t_categorias[],int numCategorias,corred
 	int i,parecido;
 	printf("Introduce el nombre de un club: ");
 	fflush(stdin);
-	scanf("%s",nombreClub);
+	scanf("%20s",nombreClub);
 	for(i=0;i<numCorredores;i++){
 		parecido = strcmp(nombreClub,t_corredores[i].club);
 		if(parecido==0){
@@ -537,7 +537,7 @@ void clasificacion_categoria(corredor t_corredores[], int numCorredores)
 	FILE* fich_categoria;
 	printf("Ingrese la categoria de la que desea ver su clasificacion: ");
 	fflush(stdin);
-	gets(nombreCategoria);
+	fgets(nombreCategoria, MAX, stdin);
 	numAptos=filtrar_corredores(t_corredores,numCorredores,t_adecuados,nombreCategoria);
 	for(i=0;i<numAptos;i++)
 	{
