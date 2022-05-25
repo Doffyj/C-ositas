@@ -1,1 +1,8 @@
 proyecto en grupo de informatica
+
+cambios: linea 50: limitado a 10 el tamaño máximo para nombres y evitar overflow
+	 linea 68: nombre, apellido1 y apellido2 limitado a 10, nombre del club limitado a 20
+	 linea 261: gets --> fgets
+	 linea 540: gets --> fgets
+
+no he comprobado si compila xd
