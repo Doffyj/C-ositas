@@ -1,3 +1,7 @@
+TLDR:
+Introduces un numero, si es par se divide entre 2 y si es impar se multiplica x3 y se le suma 1.
+Calculamos el máximo que llega a alcanzar y cuantos "hailstones" (por cuantos numero pasa hasta llegar a 1) tiene.
+
 3x+1, 3n+1
 Conjetura de Collatz/Ulam/Thwaite/Hasse/Syracusa
 Problema de Kakutani/Syracusa
@@ -6,4 +10,5 @@ Algoritmo de Hasse
 https://en.wikipedia.org/wiki/Collatz_conjecture
 
 Esto es un simple calculador + maximos + contador de 'hailstones'
+
 
