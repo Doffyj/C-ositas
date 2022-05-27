@@ -1,8 +1,8 @@
 /**
- * File: 3x+1.c
+ * File: .x+1.c
  * Author: xAthaz <xathaz@protonmail.com>
  * Date: 27/05/2022 @ 02:34:26
- * Last Modified Date: 27/05/2022 @ 02:48:35
+ * Last Modified Date: 27/05/2022 @ 03:27:40
  * Last Modified By: xAthaz <xathaz@protonmail.com>
  */
 
@@ -42,7 +42,6 @@ int	ft_calculador(int x)
 
 int	main()
 {
-	int	hel;
     int	input;
     
     printf("Bienvenido al calculador 3x+1 \nPara salir introduce 0\n");
@@ -50,10 +49,9 @@ int	main()
     do{
 	printf("Introduce un numero para comenzar la diversion: ");
 	scanf("%d", &input);
-	hel = input;
 	if(input > 0)
-	    ft_calculador(hel);
-	else
+	    ft_calculador(input);
+	else if(input < 0)
 	    printf("Los numeros negativos no entran en el problema");
     }while(input != 0);
     return 0;
