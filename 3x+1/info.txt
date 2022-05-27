@@ -1,0 +1,9 @@
+3x+1, 3n+1
+Conjetura de Collatz/Ulam/Thwaite/Hasse/Syracusa
+Problema de Kakutani/Syracusa
+Algoritmo de Hasse
+
+https://en.wikipedia.org/wiki/Collatz_conjecture
+
+Esto es un simple calculador + maximos + contador de 'hailstones'
+
