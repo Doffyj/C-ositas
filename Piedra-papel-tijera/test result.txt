@@ -1,0 +1,9 @@
+piedra-piedra bien 
+piedra-papel bien
+piedra-tijera bien
+papel-piedra bien
+papel-papel bien
+papel-tijera bien
+tijera-piedra bien
+tijera-papel bien
+tijera-tijera bien
