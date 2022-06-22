@@ -5,6 +5,15 @@ A la hora de hacer este problema hay que tener en cuenta un par de cosas.
 2- La diferencia entre Mbps y MBps
 
 	1 MB = 8 Mb
-	1 GB = 1000 MB && 1 Gb = 1000 Mb en decimal
+	1 GB = 1000 MB && 1 Gb = 1000 Mb en decimal (sistema internacional)
 
 	en binario sigue siendo 1 GB = 1024 MB pero ya no se usa tanto
+
+Mas info: - https://downloadtimecalculator.com/difference-between-MBps-and-mbps.html
+	  - https://en.wikipedia.org/wiki/Megabit
+	  - https://en.wikipedia.org/wiki/Megabyte
+
+
+Also he aprendido a basar librerias en base al SO del user
+
+en este caso para usar Sleep tengo que poner windows.h o stdio.h en SO's basados en UNIX
