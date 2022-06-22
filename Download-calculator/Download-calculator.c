@@ -2,7 +2,7 @@
  * File: Download-calculator.c
  * Author: xAthaz <xathaz@protonmail.com>
  * Date: 22/06/2022 @ 22:53:48
- * Last Modified Date: 22/06/2022 @ 23:07:45
+ * Last Modified Date: 22/06/2022 @ 23:31:23
  * Last Modified By: xAthaz <xathaz@protonmail.com>
  */
 #include <stdio.h>
@@ -10,9 +10,9 @@
 int	ft_download_calc(float i, float j){
     float x, y;
 
-    x = (i * 1024) / j;
+    x = ((i * 1000) / j) / 60;
     y = x / 60;
-    printf("La duracion estimada de la descarga es de %f minutos o %f horas.", x, y);
+    printf("La duracion estimada de la descarga es de %f minutos o %f horas.\n", x, y);
     return 0;
 }
 
