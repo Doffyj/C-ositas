@@ -1,0 +1,10 @@
+A la hora de hacer este problema hay que tener en cuenta un par de cosas.
+
+1- La unidad base es por segundo por lo que hay que dividir entre 60 de base.
+
+2- La diferencia entre Mbps y MBps
+
+	1 MB = 8 Mb
+	1 GB = 1000 MB && 1 Gb = 1000 Mb en decimal
+
+	en binario sigue siendo 1 GB = 1024 MB pero ya no se usa tanto
