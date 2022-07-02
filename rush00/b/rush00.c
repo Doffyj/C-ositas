@@ -41,14 +41,21 @@ void	rush(int x, int y)
 	int	i;
 
 	i = 2;
-	ft_lastln(x);
-	while (i < y)
+	if (x == 0 || y == 0)
 	{
-		ft_midln(x);
-		i++;
+		ft_putchar(10);
 	}
-	if (y > 1)
+	else 
 	{
 		ft_lastln(x);
+		while (i < y)
+		{
+			ft_midln(x);
+			i++;
+		}
+		if (y > 1)
+		{
+			ft_lastln(x);
+		}
 	}
 }
