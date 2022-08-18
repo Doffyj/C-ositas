@@ -6,7 +6,7 @@
 /*   By: jonsanch <jonsanch@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 05:35:29 by jonsanch          #+#    #+#             */
-/*   Updated: 2022/08/18 06:20:51 by jonsanch         ###   ########.fr       */
+/*   Updated: 2022/08/18 07:10:58 by jonsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	j = 1;
 	args = argc - 1;
 	printf("# of numbers to arrange = %d\n", args);
-	//arr = malloc((argc) * sizeof(char));
+	//arr = malloc((argc + 1) * sizeof(char));
 	printf("Original string: ");
 	while (i < args)
 	{
