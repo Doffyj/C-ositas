@@ -6,33 +6,53 @@
 /*   By: jonsanch <jonsanch@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 05:35:29 by jonsanch          #+#    #+#             */
-/*   Updated: 2022/08/18 07:10:58 by jonsanch         ###   ########.fr       */
+/*   Updated: 2022/08/19 20:09:48 by jonsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
+int	ft_longest_arg(int	a, char **c)
+{
+	int	i;
+	int	j;
+	int	max;
+
+	i = 1;
+	max = 0;
+	while (i <= a)
+	{
+		j = 0;
+		while (c[i][j] != '\0')
+			j++;
+		if (j > max)
+			max = j;
+		i++;
+	}
+	return (max);
+}
+
 int	main(int argc, char **argv)
 {
 	int		i;
 	int		j;
 	int		temp;
-	char	arr[50];
 	int		args;
+	int		*arr;
 
 	i = 0;
 	j = 1;
 	args = argc - 1;
 	printf("# of numbers to arrange = %d\n", args);
-	//arr = malloc((argc + 1) * sizeof(char));
+	arr = malloc(ft_longest_arg(args, argv) * sizeof(int));
 	printf("Original string: ");
 	while (i < args)
 	{
 		printf("%c", argv[j][0]);
 		if (j < args)
 			printf(" ");
-		arr[i] = argv[j][0] - '0';
+		arr[i] = atoi(argv[j]);
 		i++;
 		j++;
 	}
@@ -46,7 +66,8 @@ int	main(int argc, char **argv)
 			arr[j - 1] = temp;
 			j = 1;
 		}
-		j++;		
+		else
+			j++;		
 	}
 	j = 0;
 	printf("\nResult: ");
