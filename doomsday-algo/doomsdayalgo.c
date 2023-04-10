@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_isleapy(int y)
 {
@@ -53,5 +54,8 @@ int	main(void)
 	int lastep = step1 + step2 + step3 + ancday;
 	while (lastep > 6)
 		lastep = lastep - 7;
-	printf("The day %d/%d/%d fell on a %s", inday,inmonth,iny,conwayday[lastep]);
+	int diffdays = abs(monthdd - inday);
+	while (diffdays + lastep > 7)
+		diffdays = diffdays - 7;
+	printf("The day %d/%d/%d fell on a %s", inday,inmonth,iny,conwayday[diffdays + lastep]);
 }
