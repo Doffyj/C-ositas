@@ -6,22 +6,28 @@ int	main(void)
 	int inday, inmonth, iny;
 	printf("Introduce the date (dd/mm/yy):\n");
 	scanf("%d/%d/%d", &inday, &inmonth, &iny);
-	int	ancdayz = ((iny / 100) % 4);
-	switch(ancdayz)
+	
+	int	ancday = ((iny / 100) % 4);
+	switch(ancday)
 	{
 		case 0:
-			ancdayz = 2;
+			ancday = 2;
 			break;
 		case 1:
-			ancdayz = 0;
+			ancday = 0;
 			break;
 		case 2:
-			ancdayz = 5;
+			ancday = 5;
 			break;
 		case 3:
-			ancdayz = 3;
 			break;
 	}
 	int last2 = iny - ((iny / 100) * 100);
 	int	step1 =  last2 / 12;
+	int	step2 = last2 - (step1 * 12);
+	int	step3 = step2 / 4;
+	int lastep = step1 + step2 + step3 + ancday;
+	while (lastep > 6)
+		lastep = lastep - 7;
+	printf("The day %d/%d/%d fell on a %s", inday,inmonth,iny,conwayday[lastep]);
 }
