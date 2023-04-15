@@ -3,9 +3,12 @@
 
 int	ft_isleapy(int y)
 {
-	int	l2y = ((y / 100) * 100);
-	if (y % 4 == 0 && y != l2y)
-		return (1);
+	if (y % 4 == 0)
+	{
+		if (y % 400 == 0 || y % 100 != 0)
+			return (1);
+		
+	}
 	return (0);
 }
 
