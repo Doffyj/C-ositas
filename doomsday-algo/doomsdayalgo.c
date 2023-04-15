@@ -37,7 +37,7 @@ int	ft_calcdd(int iny, int ancday)
 	return (step1 + step2 + step3 + ancday);
 }
 
-int	main(void)
+void	ft_weekday()
 {
 	char	conwayday[7][9] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 	int inday, inmonth, iny; //input values
@@ -64,5 +64,17 @@ int	main(void)
 	diffdays = abs(monthdd - inday);
 	while (diffdays + lastep > 7)
 		diffdays = diffdays - 7;
-	printf("The day %d/%d/%d fell on a %s", inday,inmonth,iny,conwayday[diffdays + lastep]);
+	printf("The day %d/%d/%d fell on a %s\n", inday,inmonth,iny,conwayday[diffdays + lastep]);
+}
+
+int main(void)
+{
+	int	i = 1;
+	while(i == 1)
+	{
+		ft_weekday();
+		printf("Send 1 to calculate another:\n");
+		scanf("%d", &i);
+	}
+	return (0);
 }
