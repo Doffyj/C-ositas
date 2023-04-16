@@ -25,7 +25,7 @@ int	ft_getmonthdd(int month, int year)
 	}
 	if (month == 1)
 		return (3 + ft_isleapy(year));
-	return (28 + ft_isleapy(year));
+	return (7 + ft_isleapy(year));
 }
 
 int	ft_calcdd(int iny, int ancday)
